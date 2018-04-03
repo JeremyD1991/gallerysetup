@@ -7,7 +7,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 /*Font Styles*/
-h1,h2,h3,h4,h5,h6, .boxlinks span, nav, .mobiletoggle, .logo, #saveForm {
+h1,h2,h3,h4,h5,h6, .boxlinks a, nav, .mobiletoggle, .logo, #saveForm {
 	font-family: 'Johnston', 'Avenir', helvetica, arial, sans-serif;
 }
 
@@ -363,49 +363,19 @@ textarea {
 	transition-duration: 0.3s;
 }
 
-.third {
+.portfolio {
 	width: calc(100% / 1);
+	height: calc((100vh - 90px) / 3);
+	margin: 0;
 }
 
-.select {
-	min-height: calc((100vh - 90px) / 3);
-	align-items: center;
-	background-size: cover;
-	background-position: center;
-	overflow: hidden;
+.portfolio a {
+	height: calc((100vh - 90px) / 3);
+	font-size: 2rem;
 }
 
-.select h1 {
-	width: 100%;
-	text-align: center;
-	color: #f5f5f5;
-	text-shadow: 0 0 20px rgba(0,0,0,0.5);
-	min-height: calc((100vh - 90px) / 3);
-	align-items: center;
-	transition-duration: 0.3s;
-	opacity: 1;
-}
-
-.select h1.link {
-	margin-left: -100%;
-	background: rgba(75, 118, 138, 0.9);
-	opacity: 0;
-	width: 0;
-	transition-duration: 0.3s;
-	text-shadow: none;
-}
-
-.select:hover h1.link {
-	margin-left: 0;
-	opacity: 1;
-	width: calc(100vw / 1);
-	transition-duration: 0.3s;
-}
-
-.select:hover h1.vanish {
-	width: 0;
-	opacity: 0;
-	transition-duration: 0.3s;
+.portfolio a.galvanish {
+	margin-top: calc((-100vh + 90px) / 3);
 }
 
 /*Slider Styles*/
@@ -506,6 +476,20 @@ textarea {
 		margin-top: -120px;
 	}
 	
+	.portfolio {
+		width: calc(100% / 1);
+		height: calc((100vh - 90px) / 3);
+		margin: 0;
+	}
+
+	.portfolio a {
+		height: calc((100vh - 90px) / 3);
+	}
+
+	.portfolio a.galvanish {
+		margin-top: calc((-100vh + 90px) / 3);
+	}
+	
 	footer .maxw {
 		flex-flow: row wrap;
 	}
@@ -561,20 +545,18 @@ textarea {
 		margin-top: -150px;
 	}
 	
-	.third {
+	.portfolio {
 		width: calc(100% / 3);
+		height: calc((100vh - 90px) / 1);
+		margin: 0;
 	}
 
-	.select {
-		min-height: calc(100vh - 90px);
+	.portfolio a {
+		height: calc((100vh - 90px) / 1);
 	}
 
-	.select h1 {
-		min-height: calc(100vh - 90px);
-	}
-
-	.select:hover h1.link {
-		width: calc(100vw / 3);
+	.portfolio a.galvanish {
+		margin-top: calc((-100vh + 90px) / 1);
 	}
 	
 	/*Gallery Styles*/
