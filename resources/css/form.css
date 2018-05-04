@@ -1,0 +1,121 @@
+/*Form Style*/
+
+.wufoo input.text, .wufoo input, .wufoo textarea.textarea, .wufoo input.file {
+  font-family: 'Avenir', arial, helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.contact {
+	min-height: 450px;
+}
+
+.wufoo #header {
+  display: none;
+}
+
+#public {
+  background: none;
+}
+
+.buttons a {
+	opacity: 0;
+}
+
+.wufoo ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.noI form li {
+  width: 100%!important;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.noI form li.buttons {
+  width: 100%!important;
+  display: flex;
+  justify-content: center;
+}
+
+.wufoo label {
+  display: none;
+}
+
+.wufoo input, .wufoo textarea {
+  padding: 10px;
+  border: 1px solid #ecedee;
+  background: #ffffff;
+  color: #4c4c4c;
+  width: calc(100% - 22px);
+}
+
+.wufoo input:focus, .wufoo textarea:focus {
+  border: 1px solid #cccccc;
+}
+
+.wufoo #fo1li3 {
+  width: calc(100% - 22px)!important;
+}
+
+form li.buttons input {
+  width: 300px;
+  border: 0;
+  background: #4c4c4c;
+  color: #ffffff;
+  padding: 20px 0;
+	margin: 0;
+	font-size: 1.1rem;
+}
+
+form li.buttons input:hover {
+  background: #76b758;
+}
+
+.embed .confirm h2.freeHeading {
+	margin: 0!important;
+	font-family: 'Avenir', helvetica, arial, sans-serif;
+	text-transform: none;
+	font-size: 1.5rem;
+}
+
+.embed .confirm .create-message, .embed .confirm a.start-cta, .embed .confirm .logo-container {
+	display: none;
+}
+
+#container, html.embed {
+ background: none;
+}
+
+.wufoo li.focused {
+  background: none;
+}
+
+#errorLi, .error-container {
+  display: none;
+}
+
+form li.error {
+  background: none!important;
+}
+
+form p.error {
+  margin: 0 0 10px!important;
+}
+
+@media only screen and (min-width: 768px) {
+	.noI form li {
+		width: 48%!important;
+		padding: 0;
+		margin: 0 0 25px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	
+	.contact {
+		min-height: 350px;
+	}
+	
+}

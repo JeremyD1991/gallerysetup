@@ -1,4 +1,4 @@
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}body,html{font-size:16px;background-color:#f5f5f5;color:#4c4c4c;font-family:Avenir-Book,Helvetica,Arial,sans-serif;width:100%;overflow-x:hidden;line-height:1}:focus{outline:none;}input{font-size:15px;}b,strong{font-weight:bold;}i,em{font-style:italic;}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}body,html{font-size:16px;background-color:#ffffff;color:#4c4c4c;font-family:Avenir-Book,Helvetica,Arial,sans-serif;width:100%;overflow-x:hidden;line-height:1}:focus{outline:none;}input{font-size:15px;}b,strong{font-weight:bold;}i,em{font-style:italic;}
 
 /*Font Family Import*/
 @font-face {
@@ -80,13 +80,12 @@ nav a, nav, .mobiletoggle, .logo {
 body, html {
 	font-size: 16px;
 	font-family: 'Avenir', helvetica, arial, sans-serif;
-	background: #f5f5f5;
 	color: #555555;
 }
 
 /*Flex*/
 
-.main, .content, .holder, footer, header, .menu, .menulist, .flex, form, .select, .select h1 {
+.main, .content, .holder, footer, header, .menu, .menulist, .flex, form, .select, .select h1, .content.full, .half.copy {
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
@@ -100,11 +99,12 @@ body, html {
 	flex-flow: column wrap;
 	width: 100vw;
 	align-items: center;
-	padding: 50px 0;
+	padding: 100px 0;
 }
 
 .maxw {
 	max-width: 300px;
+	width: 100%;
 }
 
 /*Header and Footer Styles*/
@@ -476,6 +476,57 @@ textarea {
 	margin: 0 0 50px;
 }
 
+/*About Half Section Styles*/
+
+.content.full {
+	min-height: 75vh;
+	width: 100vw;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.content.full.left {
+	justify-content: flex-start;
+}
+
+.content.full.right {
+	justify-content: flex-end;
+}
+
+.half.copy {
+	width: calc(100%);
+	background: rgba(0,0,0,0.5);
+	padding: 100px 50px;
+	align-content: flex-start;
+	justify-content: center;
+	flex-flow: column wrap;
+}
+
+.right .half.copy {
+	background: rgba(100,100,100,0.5);
+}
+
+.half.copy h2 {
+	color: #ffffff;
+}
+
+.half.copy h4 {
+	color: #4097bf;
+}
+
+.half.copy p {
+	color: #ffffff;
+}
+
+#wuf-adv {
+	display: none!important;
+}
+
+#wufoo-z19gasv606jxo45 {
+	width: 100%;
+}
+
 @media only screen and (min-width: 768px) {
 	.maxw {
 		max-width: 700px;
@@ -518,6 +569,23 @@ textarea {
 
 	.portfolio a.galvanish {
 		margin-top: calc((-100vh + 79px) / 3);
+	}
+	
+	.content.full.left {
+		background-position: left;
+	}
+
+	.content.full.right {
+		background-position: right;
+	}
+	
+	.half.copy {
+		width: calc(50% - 200px);
+		background: rgba(0,0,0,0.5);
+		padding: 200px 100px;
+		align-content: flex-start;
+		justify-content: center;
+		flex-flow: column wrap;
 	}
 	
 	footer .maxw {
